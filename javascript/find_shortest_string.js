@@ -1,5 +1,17 @@
 function findShortestString(arr) {
-  // type your code here
+  let shortLength = Infinity;
+    let shortest = "";
+
+    if (arr.length > 0) {
+        for (let i = 0; i < arr.length; i++) {
+            if (typeof arr[i] === 'string' && arr[i].length < shortLength) {
+                shortest = arr[i];
+                shortLength = arr[i].length;
+            }
+        }
+    }
+
+    return shortest;
 }
 
 if (require.main === module) {
@@ -22,5 +34,5 @@ if (require.main === module) {
 
 module.exports = findShortestString;
 
-// Please add your pseudocode to this file
-// And a written explanation of your solution
+// find the shortest string in the array
+// 
